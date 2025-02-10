@@ -38,9 +38,11 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
     "nodemon": "^3.1.9",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "speakingurl": "^14.0.1"
   }
 }
