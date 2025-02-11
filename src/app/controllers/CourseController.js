@@ -10,7 +10,6 @@ class CourseController {
     async store(req, res, next) {
         try {
             req.body.image = `https://i.ytimg.com/vi/${req.body.videoId}/hqdefault.jpg`;
-
             await Course.create(req.body);
             res.redirect('/me/stored/courses');
         } catch (error) {

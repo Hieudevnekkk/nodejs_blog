@@ -10,12 +10,6 @@
         </div>
     </div>
     <div class='d-flex mt-4 align-items-center'>
-        <div class='form-check'>
-            <input class='form-check-input' type='checkbox' value='' id='checkbox-all' />
-            <label class='form-check-label' for='checkbox-all'>
-                Chọn tất cả
-            </label>
-        </div>
 
         <select class='form-select form-select-sm w-25 ms-2 me-2' name='action' required>
             <option value='' selected>-- Hành động --</option>
@@ -28,7 +22,20 @@
     <table class='table mt-4'>
         <thead>
             <tr>
-                <th scope='col' colspan='2'>#</th>
+                <th scope='col'>
+                    <div class='form-check'>
+                        <input
+                            class='form-check-input'
+                            type='checkbox'
+                            value=''
+                            id='checkbox-all'
+                        />
+                    </div>
+                </th>
+                <th scope='col'>
+                    ID
+                    {{{sortable '_id' _sort}}}
+                </th>
                 <th scope='col'>
                     Tên khóa học
                     {{{sortable 'name' _sort}}}
@@ -55,7 +62,7 @@
                                     name='courseIds[]'
                                 />
                             </div></td>
-                        <th scope='row'>{{sum @index 1}}</th>
+                        <th scope='row'>{{this._id}}</th>
                         <td>{{this.name}}</td>
                         <td>{{this.leve}}</td>
                         <td>{{this.createdAt}}</td>
